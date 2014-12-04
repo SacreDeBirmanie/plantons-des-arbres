@@ -5,16 +5,22 @@ public class Noeud<Etq,Valeur> {
 	private Etq etiquette;
 	private ArrayList<Noeud<Etq,Valeur>> fils;
 	private Valeur feuille;
-	
-	
+
+    public Noeud() {
+        this.etiquette = null;
+        this.fils = null;
+        this.feuille = null;
+    }
+
+    public Noeud(Etq etiquette) {
+        this.etiquette = etiquette;
+        this.fils = new ArrayList<Noeud<Etq,Valeur>>();
+        this.feuille = null;
+    }
+
 	public Noeud(Etq etiquette, ArrayList<Noeud<Etq,Valeur>> fils) {
 		this.etiquette = etiquette;
 		this.fils = fils;
-		this.feuille = null;
-	}
-	public Noeud(Etq etiquette) {
-		this.etiquette = etiquette;
-		this.fils = new ArrayList<Noeud<Etq,Valeur>>();
 		this.feuille = null;
 	}
 	
